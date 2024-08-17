@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: "Passion One", sans-serif;
+    --fonte3: "Sriracha", sans-serif;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--fonte1);
+}
+header{
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+header > h1{
+    font-family: var(--fonte2);
+    padding-top: 50px;
+    font-variant: small-caps; /*valor small-caps transforma a letra em maíscula, mas ao mesmo tempo da uma "suavizada" nela para não ficar completamente no capslock*/
+    color: white;
+    font-size: 4.5vw;
+}
+header > p{
+    color: white;
+    text-decoration: none;
+    padding-bottom: 50px;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+a:hover{
+    text-decoration: underline;
+}
+section{
+    font-family: var(--fonte3);
+    padding-top: 10vh; /* vh significa a altura da viewport(toda a página), e vw a largura. A diferença para a % é que a porcentagem depende do tamanho do elemento mãe, já vh e vw de toda a página*/
+    padding-bottom: 10vh;
+    line-height: 2em; /* essa propriedade define a altura entre as linhas*/
+    padding-left: 30px;
+    font-size: 3.5vw;
+}
+section > pre{ 
+    white-space: pre-line; /* essa propriedade retira o espaçamento no começo de cada parágrafo, deixados pela tag "pre", que considera tudo dentro dela para ser exibido, incluindo o espaçamento no código-fonte e as quebras de linhas*/
+}
+section > pre > p{
+    font-family: var(--fonte3);
+}
+section#img1{
+    background-image: url(../imagens/20160621_Sunflowers_3385.webp);
+}
+section#img2{
+    background-image: url(../imagens/istockphoto-89892258-612x612.jpg);
+}
+section.normal{
+    background-color: white;
+    color: black;
+}
+section.imagem{
+    background-color: darkgrey;
+    color: white;
+    box-shadow:inset 6px 6px 13px 0px rgba(0, 0, 0, 0.452);
+    background-position: right center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section.imagem > pre > p{
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.452);
+    text-shadow: 1px 1px 1px black;
+}
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
